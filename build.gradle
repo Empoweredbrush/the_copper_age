@@ -4,9 +4,9 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '1.0'
-group = 'edu.byui.theCopperAge' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'theCopperAge'
+version = '1.0-1.19.4'
+group = 'edu.byui.thecopperage' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'thecopperage'
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -48,10 +48,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'theCopperAge'
+            property 'forge.enabledGameTestNamespaces', 'thecopperage'
 
             mods {
-                theCopperAge {
+                thecopperage {
                     source sourceSets.main
                 }
             }
@@ -64,10 +64,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'theCopperAge'
+            property 'forge.enabledGameTestNamespaces', 'thecopperage'
 
             mods {
-                theCopperAge {
+                thecopperage {
                     source sourceSets.main
                 }
             }
@@ -83,10 +83,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'theCopperAge'
+            property 'forge.enabledGameTestNamespaces', 'thecopperage'
 
             mods {
-                theCopperAge {
+                thecopperage {
                     source sourceSets.main
                 }
             }
@@ -100,10 +100,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'theCopperAge', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'thecopperage', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                theCopperAge {
+                thecopperage {
                     source sourceSets.main
                 }
             }
@@ -145,12 +145,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "theCopperAge",
-                "Specification-Vendor"    : "theCopperAgeDevelopmentGroup",
+                "Specification-Title"     : "thecopperage",
+                "Specification-Vendor"    : "thecopperageDevelopmentGroup",
                 "Specification-Version"   : "1.19.4-1.0", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "theCopperAgeDevelopmentGroup",
+                "Implementation-Vendor"   : "thecopperageDevelopmentGroup",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
