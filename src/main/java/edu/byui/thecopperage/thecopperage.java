@@ -2,6 +2,7 @@ package edu.byui.thecopperage;
 
 import com.mojang.logging.LogUtils;
 
+import edu.byui.thecopperage.item.ModCreativeModeTabs;
 import edu.byui.thecopperage.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -51,6 +52,9 @@ public class thecopperage
 
     private void addCreative(CreativeModeTabEvent.BuildContents event){
         if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.COPPER_PICKAXE);
+        }
+        if (event.getTab() == ModCreativeModeTabs.COPPER_TAB){
             event.accept(ModItems.COPPER_PICKAXE);
         }
     }
