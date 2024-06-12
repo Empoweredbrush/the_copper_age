@@ -53,10 +53,17 @@ public class thecopperage
     private void addCreative(CreativeModeTabEvent.BuildContents event){
         if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.COPPER_PICKAXE);
+            event.accept(ModItems.COPPER_AXE);
+            event.accept(ModItems.COPPER_SWORD);
+            event.accept(ModItems.COPPER_SHOVEL);
+            event.accept(ModItems.COPPER_HOE);
         }
         if (event.getTab() == ModCreativeModeTabs.COPPER_TAB){
             event.accept(ModItems.COPPER_PICKAXE);
-        }
+            event.accept(ModItems.COPPER_AXE);
+            event.accept(ModItems.COPPER_SWORD);
+            event.accept(ModItems.COPPER_SHOVEL);
+            event.accept(ModItems.COPPER_HOE);        }
     }
 
 

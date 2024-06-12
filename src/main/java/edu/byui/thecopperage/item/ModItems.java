@@ -13,6 +13,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> COPPER_PICKAXE = ITEMS.register("copper_pickaxe",
         () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_AXE = ITEMS.register("copper_axe",
+        () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_SWORD = ITEMS.register("copper_sword",
+        () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_SHOVEL = ITEMS.register("copper_shovel",
+        () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_HOE = ITEMS.register("copper_hoe",
+        () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}
     }
