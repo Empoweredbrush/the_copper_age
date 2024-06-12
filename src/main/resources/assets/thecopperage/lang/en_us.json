@@ -1,4 +1,8 @@
 {
 "item.thecopperage.copper_pickaxe" : "Copper Pickaxe",
+"item.thecopperage.copper_axe" : "Copper Axe",
+"item.thecopperage.copper_sword" : "Copper Sword",
+"item.thecopperage.copper_shovel" : "Copper Shovel",
+"item.thecopperage.copper_hoe" : "Copper Hoe",
 "creativemodetab.copper_tab" : "Copper Tab"
 }
