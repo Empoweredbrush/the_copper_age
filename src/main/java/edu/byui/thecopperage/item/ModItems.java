@@ -17,6 +17,7 @@ public class ModItems {
         () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COPPER_AXE = ITEMS.register("copper_axe",
         () -> new Item(new Item.Properties()));
+        
     public static final RegistryObject<Item> COPPER_SWORD = ITEMS.register("copper_sword",
         () -> new SwordItem(ToolMaterials.COPPER, 6, -2.3f, new Item.Properties()));
 
