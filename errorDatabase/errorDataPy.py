@@ -17,7 +17,7 @@ def welcome():
     if userAnswer == 'Insert' or  userAnswer == 'insert':
         insert_info()    
     elif userAnswer == 'Delete' or userAnswer == 'delete':
-        print('test success for Delete')
+        delete_info()
 
     else:
         print('Please enter Insert or Delete, it is case sensetive')
@@ -35,11 +35,16 @@ def insert_info():
 
     con.commit()
 
-    
+def delete_info():
+    print("Before entering what you want to delete please look in the database for what you are looking for and choose a column, preferrably type.")
+
+    userInput = input("Please enter the entry you wish to remove (example: use type for column and what it states in that column, if there are multiple use date instead and enter the date of that row):")
+
+    cur.execute("DELETE FROM bug WHERE type = '%s'" % userInput)
+
+    con.commit()
+
 
 welcome()
-
-cur.execute("SELECT type FROM bug ORDER BY date")
-print(cur.fetchone())
 
 con.close()
