@@ -1,7 +1,9 @@
 package edu.byui.thecopperage.item;
 
 import edu.byui.thecopperage.thecopperage;
+import edu.byui.thecopperage.materials.ToolMaterials;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,8 +17,10 @@ public class ModItems {
         () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COPPER_AXE = ITEMS.register("copper_axe",
         () -> new Item(new Item.Properties()));
+        
     public static final RegistryObject<Item> COPPER_SWORD = ITEMS.register("copper_sword",
-        () -> new Item(new Item.Properties()));
+        () -> new SwordItem(ToolMaterials.COPPER, 6, -2.3f, new Item.Properties()));
+
     public static final RegistryObject<Item> COPPER_SHOVEL = ITEMS.register("copper_shovel",
         () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COPPER_HOE = ITEMS.register("copper_hoe",
