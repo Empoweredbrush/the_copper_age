@@ -63,7 +63,19 @@ public class thecopperage
             event.accept(ModItems.COPPER_AXE);
             event.accept(ModItems.COPPER_SWORD);
             event.accept(ModItems.COPPER_SHOVEL);
-            event.accept(ModItems.COPPER_HOE);        }
+            event.accept(ModItems.COPPER_HOE);
+            event.accept(ModItems.COPPER_BOOTS);
+            event.accept(ModItems.COPPER_CHESTPLATE);
+            event.accept(ModItems.COPPER_HELMET);
+            event.accept(ModItems.COPPER_LEGGINGS);        
+        }
+        if (event.getTab() == CreativeModeTabs.COMBAT){
+            event.accept(ModItems.COPPER_BOOTS);
+            event.accept(ModItems.COPPER_CHESTPLATE);
+            event.accept(ModItems.COPPER_HELMET);
+            event.accept(ModItems.COPPER_LEGGINGS);
+        }
+
     }
 
 
