@@ -1,7 +1,6 @@
 package edu.byui.thecopperage.materials;
 import com.google.common.base.Supplier;
-import net.minecraft.util.LazyLoadedValue;
-import net.minecraft.world.item.Item;
+
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -13,14 +12,12 @@ public enum ToolMaterials implements Tier {
     private final int durability;
     private final float miningSpeed;
     private final int enchantability;
-    private final LazyLoadedValue<Ingredient> repairIngredient;
     
     ToolMaterials(int miningLevel, int durability, float miningSpeed, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.durability = durability;
         this.miningSpeed = miningSpeed;
         this.enchantability = enchantability;
-        this.repairIngredient = new LazyLoadedValue<>(repairIngredient);
     }
     public int getUses() {
         return this.durability;
@@ -43,6 +40,6 @@ public enum ToolMaterials implements Tier {
     }
 
     public Ingredient getRepairIngredient() {
-        return this.repairIngredient.get();
+        return Ingredient.of(Items.COPPER_INGOT);
     }
 }
