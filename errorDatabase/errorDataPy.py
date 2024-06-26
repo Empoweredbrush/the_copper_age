@@ -12,13 +12,14 @@ def welcome():
 
     print("there are two options: Insert and Delete. Please answer with Insert - for adding entries and Delete for deleting entries")
 
-    userAnswer = input("User input:")
+    userAnswer = input("User input:").lower()
 
-    if userAnswer == 'Insert' or  userAnswer == 'insert':
+    if userAnswer == 'insert':
         insert_info()    
-    elif userAnswer == 'Delete' or userAnswer == 'delete':
+    elif userAnswer == 'delete':
         delete_info()
-
+    elif userAnswer == 'select':
+        select_info()
     else:
         print('Please enter Insert or Delete, it is case sensetive')
 
@@ -44,6 +45,19 @@ def delete_info():
 
     con.commit()
 
+def select_info():
+    print("To better help in comparing bugs and data from the bugs collected. The data can be organized by any column in the database, for conveniance the order by request will give the options to choose from. \n")
+
+    print("Please enter the information below \n")
+
+    user_item = input("Please enter the name of the type of bug you wish to select(example: syntax error): ")
+
+    print("\n")
+
+    order_by = input("How would you like to order the data? \n Options: type, message, date, filename, or line").lower()
+
+    cur.execute("SELECT type, message, date, filename, line FROM bug WHERE type = '%s' ORDER BY %s" % (user_item, order_by))
+    print(cur.fetchone())
 
 welcome()
 
