@@ -66,8 +66,8 @@ def select_info():
 
     order_by = input("How would you like to order the data? \n Options: type, message, date, filename, or line").lower()
 
-    cur.execute("SELECT type, message, date, filename, line FROM bug WHERE type = '%s' ORDER BY %s" % (user_item, order_by))
-    print(cur.fetchone())
+    for row in cur.execute("SELECT type, message, date, filename, line FROM bug WHERE type = '%s' ORDER BY %s" % (user_item, order_by)):
+        print(row)
 
 welcome()
 
