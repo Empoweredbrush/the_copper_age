@@ -6,7 +6,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum ToolMaterials implements Tier {
-    COPPER(2, 120, 6, 17, () -> Ingredient.of(Items.COPPER_INGOT));
+    COPPER(2, 160, 7, 22, () -> Ingredient.of(Items.COPPER_INGOT));
 
     private final int miningLevel;
     private final int durability;
