@@ -1,7 +1,9 @@
 package edu.byui.thecopperage.item;
 
 import edu.byui.thecopperage.thecopperage;
+import edu.byui.thecopperage.materials.CopperArmorMaterials;
 import edu.byui.thecopperage.materials.ToolMaterials;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -30,13 +32,17 @@ public class ModItems {
 
     //ARMOR
     public static final RegistryObject<Item> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate",
-        () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COPPER_HELMET = ITEMS.register("copper_helmet",
-        () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COPPER_LEGGINGS = ITEMS.register("copper_leggings",
-        () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> COPPER_BOOTS = ITEMS.register("copper_boots",
-        () -> new Item(new Item.Properties()));
+        () -> new ArmorItem(CopperArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+        
+        public static final RegistryObject<Item> COPPER_HELMET = ITEMS.register("copper_helmet",
+        () -> new ArmorItem(CopperArmorMaterials.COPPER, ArmorItem.Type.HELMET, new Item.Properties()));
+        
+        public static final RegistryObject<Item> COPPER_LEGGINGS = ITEMS.register("copper_leggings",
+        () -> new ArmorItem(CopperArmorMaterials.COPPER, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+        
+        public static final RegistryObject<Item> COPPER_BOOTS = ITEMS.register("copper_boots",
+        () -> new ArmorItem(CopperArmorMaterials.COPPER, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}
     }
