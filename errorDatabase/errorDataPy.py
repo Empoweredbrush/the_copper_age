@@ -10,10 +10,9 @@ print("Opened successfuly")
 def welcome():
     print("Hello, welcome to the error database! This is for the documentation of bugs and errors in the code along with removing errorsa and bugs from the table.")
 
-    print("there are two options: Insert and Delete. Please answer with Insert - for adding entries and Delete for deleting entries")
+    print("there are two options: Insert and Delete. Please answer with Insert - for adding entries, Delete - for deleting entries, and select - for displaying information in the database")
 
     userAnswer = input("User input:").lower()
-
     if userAnswer == 'insert':
         insert_info()    
     elif userAnswer == 'delete':
@@ -22,6 +21,17 @@ def welcome():
         select_info()
     else:
         print('Please enter Insert or Delete, it is case sensetive')
+        
+    while_case = True
+
+    while while_case == True:
+        user = input("Do you want to do something else? (type yes or no):").lower()
+
+        if user == "yes":
+            while_case = True
+            welcome()
+        elif user == "no":
+            while_case = False
 
 def insert_info():
     print('Please enter the info you wish to add to the database')
@@ -56,8 +66,8 @@ def select_info():
 
     order_by = input("How would you like to order the data? \n Options: type, message, date, filename, or line").lower()
 
-    cur.execute("SELECT type, message, date, filename, line FROM bug WHERE type = '%s' ORDER BY %s" % (user_item, order_by))
-    print(cur.fetchone())
+    for row in cur.execute("SELECT type, message, date, filename, line FROM bug WHERE type = '%s' ORDER BY %s" % (user_item, order_by)):
+        print(row)
 
 welcome()
 
