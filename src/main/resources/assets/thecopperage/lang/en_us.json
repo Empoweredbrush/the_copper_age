@@ -1,12 +1,12 @@
 {
-"item.thecopperage.copper_pickaxe" : "Copper Pickaxe",
-"item.thecopperage.copper_axe" : "Copper Axe",
-"item.thecopperage.copper_sword" : "Copper Sword",
-"item.thecopperage.copper_shovel" : "Copper Shovel",
-"item.thecopperage.copper_hoe" : "Copper Hoe",
-"item.thecopperage.copper_helmet": "Copper Helmet",
-"item.thecopperage.copper_chestplate": "Copper Chestplate",
-"item.thecopperage.copper_leggings": "Copper Leggings",
-"item.thecopperage.copper_boots": "Copper Boots",
-"creativemodetab.copper_tab" : "Copper Tab"
-}
+    "item.thecopperage.copper_pickaxe" : "Copper Pickaxe",
+    "item.thecopperage.copper_axe" : "Copper Axe",
+    "item.thecopperage.copper_sword" : "Copper Sword",
+    "item.thecopperage.copper_shovel" : "Copper Shovel",
+    "item.thecopperage.copper_hoe" : "Copper Hoe",
+    "item.thecopperage.copper_helmet": "Copper Helmet",
+    "item.thecopperage.copper_chestplate": "Copper Chestplate",
+    "item.thecopperage.copper_leggings": "Copper Leggings",
+    "item.thecopperage.copper_boots": "Copper Boots",
+    "creativemodetab.copper_tab" : "Copper Tab"
+    }
