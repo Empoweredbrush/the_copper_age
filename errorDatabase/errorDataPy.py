@@ -8,9 +8,9 @@ cur = con.cursor()
 print("Opened successfuly")
 
 def welcome():
-    print("Hello, welcome to the error database! This is for the documentation of bugs and errors in the code along with removing errorsa and bugs from the table.")
+    print("Hello, welcome to the error database! This is for the documentation of bugs and errors in the code along with removing errorsa and bugs from the table. \n")
 
-    print("there are two options: Insert and Delete. Please answer with Insert - for adding entries, Delete - for deleting entries, and select - for displaying information in the database")
+    print("there are two options: Insert and Delete. Please answer with Insert - for adding entries, Delete - for deleting entries, and select - for displaying information in the database \n")
 
     userAnswer = input("User input:").lower()
     if userAnswer == 'insert':
@@ -21,6 +21,7 @@ def welcome():
         select_info()
     else:
         print('Please enter Insert or Delete, it is case sensetive')
+        welcome()
         
     while_case = True
 
@@ -34,7 +35,7 @@ def welcome():
             while_case = False
 
 def insert_info():
-    print('Please enter the info you wish to add to the database')
+    print('Please enter the info you wish to add to the database \n')
 
     userType = input('Please enter the type of error you recieved: ')
     userMes = input('Please enter the message associated with the error: ')
@@ -62,12 +63,24 @@ def select_info():
 
     user_item = input("Please enter the name of the type of bug you wish to select(example: syntax error): ")
 
-    print("\n")
-
     order_by = input("How would you like to order the data? \n Options: type, message, date, filename, or line").lower()
 
-    for row in cur.execute("SELECT type, message, date, filename, line FROM bug WHERE type = '%s' ORDER BY %s" % (user_item, order_by)):
-        print(row)
+    print("\n")
+
+    user_answer = input("would you like to display a single item or multiple items? (single or multiple):").lower()
+
+    print("\n")
+
+    if user_answer == "single":
+        cur.execute("SELECT type, message, date, filename, line FROM bug WHERE type = '%s' ORDER BY %s" % (user_item, order_by))
+        print(cur.fetchone)
+    elif user_answer == "multiple":
+        for row in cur.execute("SELECT type, message, date, filename, line FROM bug WHERE type = '%s' ORDER BY %s" % (user_item, order_by)):
+            print(row)
+    else:
+        print("please enter single or multiple, is case sensetive")
+        select_info()
+
 
 welcome()
 
