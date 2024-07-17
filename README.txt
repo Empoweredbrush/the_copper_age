@@ -32,10 +32,7 @@ run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean`
 
 Mapping Names:
 =============================
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license, if you do not agree with it you can change your mapping names to other crowdsourced names in your 
-build.gradle. For the latest license text, refer to the mapping file itself, or the reference copy here:
+For the latest license text, refer to the mapping file itself, or the reference copy here:
 https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
 
 Additional Resources: 
@@ -44,3 +41,38 @@ Community Documentation: https://mcforge.readthedocs.io/en/latest/gettingstarted
 LexManos' Install Video: https://www.youtube.com/watch?v=8VEdtQLuLO0  
 Forge Forum: https://forums.minecraftforge.net/  
 Forge Discord: https://discord.gg/UvedJ9m  
+
+# Overview
+
+##Description 
+This minecraft mod makes copper useful by making copper tools and copper armor. The copper tools are slightly worse then iron (to keep it balanced) but is as good at enchanting as gold (which is high).
+
+[Software Demo Video](https://youtu.be/EXiqxxQUymE)
+
+# Development Environment
+
+## Tools
+We used the forge mod template and forge mod program. We also used jira and teams to keep up with the project. We also used VS code and github for our coding. 
+
+## Language and Libraries
+The Language we used are python for the data base and java for the mod. The modding code felt like a different Language all together. The libraries we used is sq light 3 for the Data base and the Libraries that came with the mod template.
+
+# Collaborators
+Parker Minchey
+Jack Peterson
+Shon Ashby
+Matt Talbert
+Jonathan Starks
+
+# Useful Websites
+
+* [Useful libraries](https://docs.python.org/3.8/library/sqlite3.html)
+* [SQLite - Python](https://www.tutorialspoint.com/sqlite/sqlite_python.html)
+* [SQLite Tutorial](https://www.sqlitetutorial.net/)
+* [getting the armor to have values of armor](https://github.com/The-Aether-Team/The-Aether/tree/1.20.4-develop)
+
+# Future Work
+
+* New weapons and types of weapons
+* new dog skins 
+* add magic 

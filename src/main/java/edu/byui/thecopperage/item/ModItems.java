@@ -33,7 +33,7 @@ public class ModItems {
     //ARMOR
     public static final RegistryObject<Item> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate",
         () -> new ArmorItem(CopperArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-        
+           
         public static final RegistryObject<Item> COPPER_HELMET = ITEMS.register("copper_helmet",
         () -> new ArmorItem(CopperArmorMaterials.COPPER, ArmorItem.Type.HELMET, new Item.Properties()));
         
